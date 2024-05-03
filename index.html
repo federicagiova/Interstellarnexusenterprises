@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar Nexus Enterprises</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecera">
+            <video autoplay loop muted>
+                <source src="video/video_cabecera.mp4" type="video/mp4">
+            </video>
+
+            <section class="menuylogo">
+                <nav class="menu_cabecera">
+                    <ul>
+                        <li><a href="#exploracciones">EXPLORATIONS</a></li>
+                        <li><a href="#telescopes">OUR TELESCOPES</a></li>
+                        <li><a href="#livewebcams">LIVE WEBCAM</a></li>
+                        <li><a href="#invest">INVEST</a></li>
+                    </ul>
+                </nav>
+                <button class="menu_hamburger" id="menuBtn">&#9776;</button>
+
+                <div class="logo_cabecera">
+                   <picture> <img src="img/INTERSTELLAR_NEXUS_ENTERPRISES-removebg-preview.png" alt="interstellar"></picture>
+                </div>
+            </section>
+
+
+
+            <div class="slogan">
+                <h1>ILUMINANDO EL UNIVERSO <br>
+                    CON OJOS INTERSTELARES</h1>
+            </div>
+
+            <section class="miraimg">
+                <p>MIRA NUESTRA IMAGENES <br> CON TELESCOPIOS EN ORBITA</p>
+                <div class="conocermas">
+
+                    <p class="conocer"><a href="#gallery">CONOCER MAS</a></p>
+
+                </div>
+            </section>
+        </div>
+    </header>
+    <main>
+        <!-- EXPLORACCIONES -->
+        <div class="exploracciones" id="exploracciones">
+
+            <section class="exploracion">
+                <h2>EXPLORACCIÓNES</h2><br>
+                <p>Hemos emprendido nuevas exploraciones en el espacio,
+                    avanzando hacia nuevos horizontes celestiales con
+                    tecnologías innovadoras y ambiciones sin límites. A través de
+                    nuestra ingeniosidad técnica, estamos abriendo nuevas
+                    fronteras para la humanidad en el espacio.
+                </p>
+            </section>
+
+            <section class="mars">
+                <h2>MARS</h2>
+                <p>con sonda aerospacial</p>
+            </section>
+
+            <section class="andromeda">
+                <h2>ANDROMEDA</h2>
+                <p>solo via telescopios</p>
+            </section>
+
+
+            <section class="jupiter">
+                <h2>JUPITER</h2>
+                <p>con sonda aerospacial</p>
+
+            </section>
+        </div>
+
+
+
+
+        <!-- NUESTRO TELESCOPIOS  -->
+
+        <div class="telescopes" id="telescopes">
+            <section class="introduction">
+                <video autoplay loop muted>
+                    <source src="video/telescopio.mp4" type="video/mp4">
+                </video>
+                <h2>NUESTROS <br> TELESCOPIOS EN <br> ORBITA</h2>
+                <p>La observación espacial a través de
+                    telescopios en órbita ofrece una visión
+                    clara y continua del espacio sin estar
+                    influenciada por las capas atmosféricas
+                    terrestres. Esta tecnología elimina las
+                    distorsiones ópticas de la luz, y permite observar con precisión fenómenos
+                    cósmicos más de los telescopios terrestres.</p>
+            </section>
+            <section class="descubremas">
+                <p class="conocer"><a href="#gallery">CONOCER MAS</a></p>
+                <br><br><br>
+                <span>
+                    <p class="explication_descrubremas">Gracias a su posición orbital,
+                        los telescopios espaciales
+                        pueden superar obstáculos
+                        como la contaminación
+                        lumínica y atmosférica, lo que
+                        permite una mayor flexibilidad
+                        en la observación de
+                        diferentes puntos del espacio
+                    </p>
+                </span>
+            </section>
+        </div>
+
+<!-- TELESCOPIOS -->
+
+        <div class="livewebcam" id="livewebcams">
+            <video autoplay loop muted>
+                <source src="video/video_webcam.mp4">
+            </video>
+
+            <section class="webcam1">
+                <h2>Mira en directo desde</h2>
+                <div class="video1"></div>
+                <iframe width="514" height="314" src="https://www.youtube.com/embed/0FBiyFpV__g"
+                    title="24/7 Live from the International Space Station | Dream Trips" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading=lazy></iframe>
+                <h3>Horizon Gateway <br>
+                    Orbital Station</h3>
+            </section>
+            <section class="webcam2">
+                <h2>Mira en directo desde</h2>
+                <div class="cam2">
+                    <iframe width="514" height="314" src="https://www.youtube.com/embed/DkXUcy9BlLk"
+                        title="Unveil the Cosmos: Live ISS Experience 24/7!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading=lazy></iframe>
+                </div>
+
+                <h3>Cosmos Nexus <br>
+                    Orbital Platform</h3>
+            </section>
+        </div>
+
+        <!-- FORMULARIO INVEST -->
+
+        <div class="form" id="invest">
+            <h2>INVEST</h2>
+
+            <div class="formulario">
+                <section class="formulario_names">
+                    <section class="name">
+                        <input type="text" name="nombre" id="nameInput" placeholder="Write your name">
+                    </section>
+
+                    <section class="surname">
+                        <input type="text" name="nombre" id="surnameInput" placeholder="Write your surname">
+                    </section>
+
+                    <section class="budget">
+                        <select id="scelta" name="scelta">
+                            <option value="budget" disabled selected hidden>Select your budget</option>
+                            <option value="150k - 250k">150k - 250k</option>
+                            <option value="250k - 500k">250k - 500k</option>
+                            <option value="500k - 1M">500k -1M
+                            </option>
+                        </select>
+                    </section>
+
+                    <section class="mail">
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                    </section>
+                </section>
+
+                <section class="formulario_info">
+                    <section class="info" id="info">
+                        <textarea id="messaggio" name="messaggio" placeholder="Inserisci il tuo messaggio"
+                            required></textarea>
+                    </section>
+
+                    <section class="invia">
+                        <input type="submit" value="Envia" id="envia">
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <!-- GALLERY -->
+        <div class="gallery" id="gallery">
+            <h2>NUESTRAS IMÁGENES TOMADAS CON TELESCOPIOS EN ÓRBITA</h2>
+
+            <div class="gallery_img">
+
+                <picture><img src="img/slider1.png" alt="img1" class="imagen" loading=lazy></picture>
+                <picture><img src="img/slider2.png" alt="img2" class="imagen" loading=lazy></picture>
+                <picture><img src="img/slider3.png" alt="img3" class="imagen" loading=lazy></picture>
+                <picture><img src="img/slider4.png" alt="img4" class="imagen" loading=lazy></picture>
+                <picture><img src="img/slider5.png" alt="img5" class="imagen" loading=lazy></picture>
+                <picture><img src="img/slider6.png" alt="img6" class="imagen" loading=lazy></picture>
+
+            </div>
+        </div>
+        <!-- FOOTER -->
+    </main>
+
+    <footer>
+        <div class="menu_footer">
+            <ul>
+                <li><a href="#exploracciones">EXPLORATIONS</a></li>
+                <li><a href="#telescopes">OUR TELESCOPES</a></li>
+                <li><a href="#livewebcams">LIVE WEBCAM</a></li>
+                <li><a href="#invest">INVEST</a></li>
+            </ul>
+        </div>
+
+        <p>© 2024 All rights are reserved</p>
+
+    </footer>
+    <script src="js/interstellar.js" defer></script>
+</body>
+
+</html>
