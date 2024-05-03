@@ -1,0 +1,810 @@
+html {
+  box-sizing: border-box;
+  font-family: "Tenor Sans";
+scroll-behavior: smooth; /*permite de hacer uno scroll mas lento*/
+}
+
+*,
+*::after,
+*::before {
+
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {/*colores de la empresa*/
+  --color-primario: #EAF7F6;
+  --color-secondario: #06002E;
+  --color-terziario: #34322D;
+  --color-cuarto: #E2E4E4;
+}
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* CABECERA */
+.cabecera {
+  position: relative;
+  width: 100%;
+  padding: 21.875rem;
+  overflow: hidden; /*nascunde la barra que aparece para ver la imagen hacendo scroll*/
+  font-family: "Tenor Sans";
+  color: var(--color-cuarto);
+}
+
+.cabecera video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.menuylogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /*ppone espacio entre elementos*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem;
+  box-sizing: border-box;
+
+}
+
+.menu_cabecera ul {
+  display: flex; 
+  flex-direction: row; /*la lista debe ser en orizontal*/
+  list-style-type: none;
+  padding: 0;
+  margin: 1.25rem 0 0 .625rem;
+}
+
+.menu_cabecera li {
+  margin: 0 6.25rem 0 0;
+}
+
+.menu_cabecera li:last-child {
+  margin-right: 0;
+}
+
+.menu_cabecera ul li a { 
+  text-decoration: none; /*borra la linea abajo del texto/link*/
+  color: var(--color-cuarto);
+  font-size: 1.5625rem;
+
+}
+
+.menu_cabecera ul li a:hover {
+  color: var(--color-terziario); /*cambia el color cuano pone el cursor*/
+}
+
+.menu_hamburger {
+  display: none; /* Nascunde el menu hamburger */
+}
+
+
+
+/*Asi el menu hamburger no es visible con pantalla completa */
+
+.logo_cabecera {
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo_cabecera img {
+  width: 13.125rem;
+  margin: 0 1.25rem 0 0;
+  padding: -0.625rem;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  letter-spacing: .9375rem;
+  font-size: 150%;
+  font-weight: 100;
+}
+
+.miraimg {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2rem;
+  right: 5rem;
+  align-items: center;
+}
+
+.miraimg p {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0 0 3.125rem 0;
+}
+
+.conocer a {
+  text-decoration: none;  /*borra la linea abajo del texto/link*/
+  font-size: .875rem;
+  color: var(--color-cuarto);
+}
+
+.conocer a:hover { /*para cambiar detalles cuando pone el cursor*/
+  border: .0625rem solid var(--color-cuarto);
+  border-radius: 1.25rem;
+  padding: .9375rem;
+  transition: .3s ease; 
+}
+
+
+/* EXPLORACCIONES */
+
+.exploracciones {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /*crea 3 columnas, la primera es el doble de una columna*/
+  grid-template-rows: minmax(20rem, auto) minmax(20rem, auto); /*crea dor filas*/
+  background-color: var(--color-cuarto);
+  margin: 1.25rem 0 0 0;
+  padding: 1.25rem;
+}
+
+.mars,
+.andromeda,
+.jupiter {
+  border-radius: 1.25rem;
+  margin: 1.25rem;
+}
+
+/* MARS */
+.mars {
+  grid-row: 2;
+  grid-column: 3;
+  justify-content: end;
+  background-image: url(../img/mars.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease /*pone una animacion*/
+}
+
+.mars:hover {
+  transform: scale(1.3) /*completa la animacion*/
+}
+
+.mars h2,
+p {
+  margin: .625rem;
+  color: var(--color-primario);
+}
+
+.mars h2 {
+  padding: 6.25rem 0 0 0;
+
+
+}
+
+/* ANDROMEDA */
+.andromeda {
+  grid-row: 1;
+  grid-column: 3;
+  background-image: url(../img/andromeda.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 20rem;
+  /* Pone una dimension maxima vertical */
+  overflow: none;
+  transition: transform 0.3s ease
+}
+
+.andromeda:hover {
+  transform: scale(1.3)
+}
+
+.andromeda h2,
+p {
+  margin: .625rem;
+  color: var(--color-primario);
+}
+
+.andromeda h2 {
+  padding: 6.25rem 0 0 0;
+}
+
+/* JUPITER */
+
+.jupiter {
+  grid-row: 2;
+  grid-column: 2;
+  border-radius: 1.25rem;
+  position: relative;
+  background-image: url(../img/jupiter.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease
+}
+
+.jupiter:hover {
+  transform: scale(1.3)
+}
+
+.jupiter h2,
+p {
+  margin: .625rem;
+  color: var(--color-primario);
+}
+
+.jupiter h2 {
+  padding: 6.25rem 0 0 0;
+}
+
+.exploracion {
+  grid-row: 1;
+  grid-column: span 2;
+  margin: 3.125rem 10rem 1.25rem 3.125rem;
+}
+
+
+.exploracion {
+  grid-row: 1;
+  grid-column: span 2;
+
+}
+
+.exploracion h2 {
+  font-size: 2.5rem;
+}
+
+.exploracion h2,
+p {
+  color: var(--color-terziario);
+  margin: 0 1.25rem;
+}
+
+.exploracion p {
+  color: var(--color-terziario);
+  font-size: 1.25rem;
+
+}
+
+/* NUESTROS TELESCOPIOS */
+
+.telescopes {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../img/sfondo_telescopios.png); /*video de fundo*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-primario);
+}
+
+
+.introduction {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  border: var(--color-primario);
+  flex-basis: 50vw;
+  margin: 12.5rem 9.375rem 6.25rem;
+ border-radius: 1.25rem;
+  overflow: hidden;
+  max-height: 20rem;
+  max-width: 50rem;
+  /* Pone una dimension maxima vertical */
+  overflow: none;
+
+}
+
+
+.introduction video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 1.25rem;
+  opacity: 30%;
+}
+
+.descubremas {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50vw;
+  align-items: center;
+  justify-content: center;
+  margin: 0 9.375rem;
+}
+
+.introduction p,
+h2 {
+  color: var(--color-primario);
+  font-weight: 400;
+  margin: 10px;
+}
+
+.introduction h2 {
+  font-size: 1.875rem;
+}
+
+.introduction p {
+  font-size: 1.25rem;
+}
+
+.descubremas h3,
+p {
+  color: var(--color-primario);
+  margin: 0 1.875rem 0 1.25rem;
+  font-weight: 100;
+}
+
+.explication_descrubremas {
+  border: .125rem var(--color-primario) solid;
+  border-radius: 1.25rem;
+}
+
+.descubremas p {
+  font-size: 120%;
+  padding: 1.25rem;
+}
+
+.descubremas h3 {
+  font-size: 200%;
+}
+
+/* LIVE WEBCAM */
+
+.livewebcam {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  padding: 6.25rem 0;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.livewebcam video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 80%;
+
+}
+
+.webcam1 {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  color: var(--color-primario);
+  margin: 0 0 0 3.125rem;
+}
+
+
+.webcam2 {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+  color: var(--color-primario);
+  margin: 0 3.125rem 0 0;
+}
+
+.video1 .video2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0 .625rem;
+  max-width: 50%;
+}
+
+.webcam1 h3,
+.webcam2 h3 {
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.webcam1 h2,
+.webcam2 h2 {
+  font-weight: 200;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+
+
+/* FORMULARIO INVEST */
+.form {
+  background-color: var(--color-cuarto);
+  background-image: url(../img/invest_fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+
+}
+
+.form h2 {
+  text-align: center;
+  font-size: 3.125rem;
+  color: var(--color-primario);
+  padding: 1rem 0 0 0;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; /*pone espacio entre los elementos*/
+
+}
+
+.formulario_names,
+.formulario_info {
+  display: flex;
+  padding: 1.25rem 0 1.25 0;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 3.125rem 0
+}
+
+
+.formulario_info {
+  align-items: flex-end; /*pone el elemento a la derecha*/
+}
+
+#nameInput,
+#surnameInput,
+#scelta,
+#email {
+  height: 5rem;
+  width: 18.75rem;
+  margin: .625rem;
+  font-family: 'Tenor Sans';
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.25rem;
+  border: .0625rem solid var(--color-primario);
+  border-radius: 1.25rem;
+  background-color: transparent; /*quita el fondo de la celda*/
+}
+
+textarea {
+  resize: none;
+  height: 18rem;
+  width: 18.75rem;
+  margin: 0 0 .625rem 0;
+  font-family: 'Tenor Sans';
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.25rem;
+  border: .0625rem solid var(--color-primario);
+  border-radius: 1.25rem;
+  background-color: transparent;
+}
+
+#envia {
+  height: 5rem;
+  width: 8rem;
+  font-family: 'Tenor Sans';
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-primario);
+  border: .0625rem solid var(--color-primario);
+  border-radius: 1.25rem;
+  background-color: transparent; /*quita el fondo de la celda*/
+} 
+
+#envia:hover {
+  background-color: var(--color-cuarto);
+  color: var(--color-terziario);
+  cursor: pointer; /* cambia el cursor desde una flecha hasta un pointer*/
+}
+
+/* GALLERY */
+.gallery {
+  background-color: var(--color-cuarto);
+}
+
+.gallery h2 {
+  color: var(--color-terziario);
+  text-align: center;
+  font-size: 3.125rem;
+  margin: 0;
+  padding: 1.875rem 0;
+}
+
+.gallery_img {
+  display: flex;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  margin: 3.125rem 0 0 0;
+  transition: transform 0.3s ease;
+  border-radius: 1.25rem;
+}
+
+
+.imagen:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: var(--color-secondario);
+  padding: 1.25rem;
+  margin: 3.125rem 0 0 0;
+  clear: both;
+  /* limpia los elementos float */
+}
+
+.menu_footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: .625rem;
+  align-items: center;
+}
+
+.menu_footer li {
+  line-height: 1.875rem;
+  color: var(--color-cuarto);
+}
+
+.menu_footer ul li a {
+  text-decoration: none;
+  color: var(--color-cuarto);
+}
+
+.menu_footer ul li a:hover {
+  color: var(--color-terziario);
+}
+
+footer p {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+
+  .menu_cabecera ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #0c0c0c;
+    padding: 1.25rem;
+    border-radius: .3125rem;
+  }
+
+  .menu_cabecera ul li {
+    margin: 0 0 .625rem 0;
+  }
+
+  .menu_hamburger {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 1.5rem;
+    color: var(--color-cuarto);
+    background-color: transparent; /*quita el fondo*/
+    border: none;
+    cursor: pointer;
+    
+  }
+
+  .menu_hamburger:focus {
+    outline: none;
+  }
+
+  .menu_hamburger:hover {
+    color: var(--color-terziario);
+  }
+
+  /* Pone el menu hamburguesa */
+
+  
+  .menu_cabecera ul {
+    display: none; /* Nascunde el menu orizontal */
+    
+  }
+
+  .menu_hamburger {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    text-align: start;
+    font-size: 1.875rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+  }
+
+  /* Aggiunta per il menu hamburger */
+  .menu_cabecera.active ul {
+    display: flex; /* Muestra el menu vertical cuando el menu hamburger es active */
+    background-color: var(--color-cuarto);
+    margin: 2.1875rem 0 0 0;
+  }
+  
+  .menu_cabecera.active ul li a {
+    font-size: 1rem;
+    color: var(--color-terziario);
+  }
+  h1 {
+    font-size: 1.875rem;
+    font-weight: 200;
+  }
+
+  .miraimg p {
+    font-size: .75rem;
+    margin: 0 0 .625rem 0;
+  }
+
+  .conocer a {
+    font-size: .75rem;
+  }
+
+  .logo_cabecera {
+    margin: 0;
+  }
+
+  .logo_cabecera img {
+    width: 10rem;
+    margin-right: 1rem;
+  }
+
+  .slogan {
+    font-size: 120%;
+    letter-spacing: 0.5rem;
+  }
+
+  .miraimg p {
+    font-size: 1rem;
+  }
+
+  /* EXPLORACIONES */
+
+  .exploracciones {
+    grid-template-columns: 1fr;
+    /* Cambia el diseño a una sola columna */
+    grid-template-rows: auto;
+    /* Reinicia el número de filas */
+  }
+
+  .exploracion p,
+  h2 {
+    text-align: center;
+  }
+
+  .mars,
+  .andromeda,
+  .jupiter {
+    grid-row: auto;
+    /* Reinicia la posición de las secciones */
+    grid-column: auto;
+    /* Reinicia la posición de las secciones */
+    margin: .625rem 6.25rem;
+    /* Ajusta el margen entre las secciones */
+    padding: 100px;
+  }
+
+  .exploracion {
+    grid-row: auto;
+    /* Reinicia la posición de la sección */
+    grid-column: auto;
+    /* Reinicia la posición de la sección */
+    margin: 1.25rem 0;
+    /* Ajusta el margen entre las secciones */
+  }
+
+  /* TELESCOPIOS */
+
+  .telescopes {
+    flex-direction: column;
+    /* Cambia la disposicion en columna */
+    align-items: center;
+    /* Centra los elementos orizzontalmente */
+  }
+
+  .introduction {
+    order: -1;
+    /* cambia el orden de los elementos 'descubremas' */
+    margin: 3.125rem 9.375rem 0;
+    /* cambia el margen superior */
+  }
+
+  .introduction h2 {
+    font-size: 1rem;
+  }
+
+  .introduction p {
+    font-size: .75rem;
+  }
+
+
+  .descubremas {
+    margin: 1.25rem 9.375rem 6.25rem;
+    /* cambia el margen inferior */
+  }
+
+  .explication_descrubremas {
+    font-size: .75rem !important;
+  }
+
+  /* WEBCAM */
+  .livewebcam {
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-terziario);
+
+  }
+
+  .webcam1,
+  .webcam2 {
+    margin: 1.25rem 0;
+  }
+
+  .webcam1 h4,
+  .webcam2 h4 {
+    font-size: 1.25rem;
+  }
+
+  .webcam h2,
+  .webcam h2 {
+    font-size: .9375rem;
+  }
+
+  /* INVEST */
+  .formulario {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    /* Quita el margen */
+  }
+
+  .formulario_names {
+    margin: 0 0 .625rem 0;
+  }
+
+  /* GALLERY */
+
+  .gallery h2 {
+    font-size: 1.25rem;
+  }
+
+}
